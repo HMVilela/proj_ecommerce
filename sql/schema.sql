@@ -26,10 +26,9 @@ delete from tblUser;
 -- Create tables
 create table tblUser(
     id INTEGER NOT NULL AUTO_INCREMENT,
-    username VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     passw VARCHAR(100) NOT NULL,
     contactName VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
     zipCode VARCHAR(30) NOT NULL,
     state VARCHAR(100) NOT NULL,
     city VARCHAR(100) NOT NULL,
@@ -79,15 +78,15 @@ create table tblShopCart(
 -----------------------------------------------------------
 -- Insert tables
 
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(1, 'user1', 'p1', 'name_01', 'email_01@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lala, 1', '35-1234-1234');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(2, 'user2', 'p2', 'name_02', 'email_02@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lele, 2', '35-1234-2345');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(3, 'user3', 'p3', 'name_03', 'email_03@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lili, 3', '35-1234-3456');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(4, 'user4', 'p4', 'name_04', 'email_04@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lolo, 4', '35-1234-4567');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(5, 'user5', 'p5', 'name_05', 'email_05@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lulu, 5', '35-1234-5678');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(6, 'user6', 'p6', 'name_06', 'email_06@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua kaka, 6', '35-1234-6789');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(7, 'user7', 'p7', 'name_07', 'email_07@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua keke, 7', '35-1234-7890');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(8, 'user8', 'p8', 'name_08', 'email_08@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua kiki, 8', '35-1234-0987');
-INSERT INTO tblUser(id, username, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(9, 'user9', 'p9', 'name_09', 'email_09@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua koko, 9', '35-1234-9876');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(1, 'a', 'name_01', 'a', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lala, 1', '35-1234-1234');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(2, 'p2', 'name_02', 'email_02@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lele, 2', '35-1234-2345');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(3, 'p3', 'name_03', 'email_03@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lili, 3', '35-1234-3456');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(4, 'p4', 'name_04', 'email_04@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lolo, 4', '35-1234-4567');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(5, 'p5', 'name_05', 'email_05@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua lulu, 5', '35-1234-5678');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(6, 'p6', 'name_06', 'email_06@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua kaka, 6', '35-1234-6789');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(7, 'p7', 'name_07', 'email_07@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua keke, 7', '35-1234-7890');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(8, 'p8', 'name_08', 'email_08@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua kiki, 8', '35-1234-0987');
+INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(9, 'p9', 'name_09', 'email_09@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua koko, 9', '35-1234-9876');
 
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
 VALUES(1, 'Final Fantasy XV', 'Description 01', 199.00, 'AVAILABLE', 'RPG', 'PS4', 'css/img/finalFantasyXV.png');

@@ -1,0 +1,31 @@
+{
+  "name": "proj_ecommerce",
+  "version": "0.1.0",
+  "homepage": "https://github.com/lucianoctrl8/proj_ecommerce",
+  "description": "Inatel E-Commerce Game Project",
+  "main": "index.html",
+  "keywords": [
+    "rest",
+    "ajax",
+    "php",
+    "slim"
+  ],
+  "authors": [
+    "Luciano Vilela",
+    "Henrique Vilela"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "pure": "~0.6.0",
+    "blueimp-md5": "~1.1.0"
+  }
+}

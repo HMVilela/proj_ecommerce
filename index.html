@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Inatel Games E-Commerce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="css/img/favicon.ico" type="image/x-icon">
-    <link href="css/styles.css" rel="stylesheet" media="screen">
-    <link class="color-scheme" href="css/color-default.css" rel="stylesheet" media="screen">
-    <script type="text/javascript" async="" src="js/dc.js"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <link rel="icon" href="assets/css/img/favicon.ico" type="image/x-icon">
+    <link href="assets/css/styles.css" rel="stylesheet" media="screen">
+    <link class="color-scheme" href="assets/css/color-default.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" async="" src="assets/js/dc.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
   </head>
   <body>
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -19,31 +19,24 @@
                 <i class="fa fa-times"></i>
             </button>
             <h2>Entre ou <a href="#">Registre-se</a></h2>
-            <p class="large">Use sua conta de redes sociais</p>
-            <div class="social-login">
-            	<a class="facebook" href="#"><i class="fa fa-facebook-square"></i></a>
-            	<a class="google" href="#"><i class="fa fa-google-plus-square"></i></a>
-            	<a class="twitter" href="#"><i class="fa fa-twitter-square"></i></a>
-            </div>
           </div>
           <div class="modal-body">
-          <form class="login-form" novalidate="novalidate">
+          <form class="login-form" id="validateData">
             <div class="form-group group">
             	<label for="log-email">Email</label>
-              <input type="email" class="form-control" name="log-email" id="log-email" placeholder="Insira seu email" required="">
-              <a class="help-link" href="#">Esqueceu o email?</a>
+              <input type="email" class="form-control" name="logEmail" id="logEmail" placeholder="Insira seu email" required="">
             </div>
             <div class="form-group group">
             	<label for="log-password">Senha</label>
-              <input type="text" class="form-control" name="log-password" id="log-password" placeholder="Insira sua senha" required="">
-              <a class="help-link" href="#">Esqueceu a senha?</a>
+              <input type="text" class="form-control" name="logPassword" id="logPassword" placeholder="Insira sua senha" required="">
             </div>
             <div class="checkbox">
               <label>
                   <div class="icheckbox" style="position: relative;">
                       <input type="checkbox" name="remember" style="position: absolute; opacity: 0;">
                       <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
-                  </div> Lembre-me</label>
+                  </div>
+              </label>
             </div>
             <input class="btn btn-success" type="submit" value="Login">
           </form>
@@ -68,7 +61,7 @@
     	<div class="right-bg"></div>
       
     	<div class="container">
-      	<a class="logo" href="#"><img src="css/img/logo.png" alt="Inatel Games"></a>
+      	<a class="logo" href="#"><img src="assets/css/img/logo.png" alt="Inatel Games"></a>
         
         <div class="menu-toggle">
             <i class="fa fa-list"></i>
@@ -132,7 +125,7 @@
                   	<p class="p-style2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   </div>
                   <div class="col-2">
-                  	<img src="css/img/menu-drodown-offer.jpg" alt="Oferta Especial">
+                  	<img src="assets/css/img/menu-drodown-offer.jpg" alt="Oferta Especial">
                   	<a class="btn btn-block" href="#">
                   	    <span>R$ 584</span>Oferta Especial
                   	 </a>
@@ -166,7 +159,7 @@
                 	<span class="sale"></span>
                 </div>
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/1(1).jpg" alt="1"></a>
+              	<a href="#"><img src="assets/css/img/1(1).jpg" alt="1"></a>
                 <div class="footer">
                 	<a href="#">Nikon D5300</a>
                   <div class="tools">
@@ -186,7 +179,7 @@
                 </div>
               	<div class="price-label">R$ 715,00</div>
                 <div class="price-label old-price">R$ 920,00</div>
-              	<a href="#"><img src="css/img/2(1).jpg" alt="2"></a>
+              	<a href="#"><img src="assets/css/img/2(1).jpg" alt="2"></a>
                 <div class="footer">
                 	<a href="#">Nikon Coolpix</a>
                   <div class="tools">
@@ -205,7 +198,7 @@
                   <span class="best-seller"></span>
                 </div>
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/3(1).jpg" alt="3"></a>
+              	<a href="#"><img src="assets/css/img/3(1).jpg" alt="3"></a>
                 <div class="footer">
                 	<a href="#">Nikon WP-N3</a>
                   <div class="tools">
@@ -221,7 +214,7 @@
           	<div class="col-lg-3 col-md-4 col-sm-6">
             	<div class="tile">
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/4(1).jpg" alt="4"></a>
+              	<a href="#"><img src="assets/css/img/4(1).jpg" alt="4"></a>
                 <div class="footer">
                 	<a href="#">Nikkor 10-30 VR</a>
                   <div class="tools">
@@ -238,7 +231,7 @@
             	<div class="tile">
               	<div class="price-label">R$ 715,00</div>
                 <div class="price-label old-price">R$ 920,00</div>
-              	<a href="#"><img src="css/img/5(1).jpg" alt="5"></a>
+              	<a href="#"><img src="assets/css/img/5(1).jpg" alt="5"></a>
                 <div class="footer">
                 	<a href="#">Nikon WU 1b</a>
                   <div class="tools">
@@ -254,7 +247,7 @@
           	<div class="col-lg-3 col-md-4 col-sm-6">
             	<div class="tile">
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/6(1).jpg" alt="6"></a>
+              	<a href="#"><img src="assets/css/img/6(1).jpg" alt="6"></a>
                 <div class="footer">
                 	<a href="#">Nikon V3</a>
                   <div class="tools">
@@ -270,7 +263,7 @@
           	<div class="col-lg-3 col-md-4 col-sm-6">
             	<div class="tile">
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/7.jpg" alt="7"></a>
+              	<a href="#"><img src="assets/css/img/7.jpg" alt="7"></a>
                 <div class="footer">
                 	<a href="#">Nikon J4</a>
                   <div class="tools">
@@ -286,7 +279,7 @@
           	<div class="col-lg-3 col-md-4 col-sm-6">
             	<div class="tile">
               	<div class="price-label">R$ 715,00</div>
-              	<a href="#"><img src="css/img/8.jpg" alt="8"></a>
+              	<a href="#"><img src="assets/css/img/8.jpg" alt="8"></a>
                 <div class="footer">
                 	<a href="#">Nikkor AF-S</a>
                   <div class="tools">
@@ -312,11 +305,11 @@
             </div>
           	<div class="col-lg-5 col-md-5 col-sm-5">
             	<div class="payment">
-                <img src="css/img/visa.png" alt="Visa">
-                <img src="css/img/paypal.png" alt="PayPal">
-                <img src="css/img/master.png" alt="Master Card">
-                <img src="css/img/discover.png" alt="Discover">
-                <img src="css/img/amazon.png" alt="Amazon">
+                <img src="assets/css/img/visa.png" alt="Visa">
+                <img src="assets/css/img/paypal.png" alt="PayPal">
+                <img src="assets/css/img/master.png" alt="Master Card">
+                <img src="assets/css/img/discover.png" alt="Discover">
+                <img src="assets/css/img/amazon.png" alt="Amazon">
               </div>
             </div>
           </div>
@@ -324,27 +317,30 @@
       </div>
     </footer>
     
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/icheck.min.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="js/jquery.shuffle.min.js"></script>
-    <script src="js/lightGallery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/masterslider.min.js"></script>
-    <script src="js/mailer.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/color-switcher.js"></script>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/icheck.min.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <script src="assets/js/jquery.touchSwipe.min.js"></script>
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+    <script src="assets/js/lightGallery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/masterslider.min.js"></script>
+    <script src="assets/js/mailer.js"></script>
+    <script src="assets/js/color-switcher.js"></script>
 
-    <script type="text/javascript" src="js/conversion.js"></script>
+    <script type="text/javascript" src="assets/js/conversion.js"></script>
     
+<!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+    <script src="bower_components/blueimp-md5/js/md5.min.js"></script>
     
+    <script type="text/javascript" src="assets/jsProject/UserController.js"></script>
+    <script type="text/javascript" src="assets/jsProject/UserService.js"></script>
   
 
 </body>
