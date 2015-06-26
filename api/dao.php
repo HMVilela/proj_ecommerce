@@ -24,6 +24,20 @@ $app->post('/validateLoginData', function () use ( $app ) {
         echo 'FAIL';
     }
 });
+$app->get('/getGameList', function () use ( $app ) {
+	$db = getDB();
+    $stt = "SELECT * FROM tblGame ; ";
+    $result = mysql_query($stt, $db);
+    if($result) {
+        while($row = mysql_fetch_array($result)) {
+            echo $row[1];
+        } 
+    }else{
+        echo 'FAIL';
+    }
+});
+
+
 
 function getConnection() {
 	$dbhost = '127.0.0.1';

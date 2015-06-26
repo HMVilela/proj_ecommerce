@@ -1569,6 +1569,7 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
+/*
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -1584,6 +1585,8 @@ pre code {
     width: 1170px;
   }
 }
+*/
+
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -9449,6 +9452,7 @@ html {
 }
 .page-content {
   padding-top: 144px;
+    background-color: black;
 }
 .gray-bg {
   background: #e6e6e6;
@@ -12056,7 +12060,7 @@ header .search-form .close-search:hover {
   left: 15px;
   top: 15px;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 400px) {
   .menu,
   .small-header .menu {
     position: absolute;
@@ -12066,8 +12070,8 @@ header .search-form .close-search:hover {
     border-top: 1px solid #fff;
     top: 144px;
     padding: 15px 15px 30px 15px;
-    overflow-y: scroll;
-    display: none;
+/*    overflow-y: scroll;*/
+    display: visible;
   }
   .menu.expanded,
   .small-header .menu.expanded {

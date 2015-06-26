@@ -16,14 +16,12 @@ var UserController = {
             email: form.logEmail.value,
             password: form.logPassword.value
         };
-        console.log(user.email + ' | ' + user.password);
         UserService.validateData(user, function(response){
-            console.log(response);
-//            if(response == 'SUCCESS'){
-//                alert('Usuario Ok');
-//            }else{
-//                alert('Usuario Nao Existe');
-//            }
+            if(response == 'SUCCESS'){
+                alert('Usuario Ok');
+            }else{
+                alert('Usuario Nao Existe');
+            }
             UserController.clearForm();
         });
     },
