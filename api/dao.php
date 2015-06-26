@@ -26,15 +26,28 @@ $app->post('/validateLoginData', function () use ( $app ) {
 });
 $app->get('/getGameList', function () use ( $app ) {
 	$db = getDB();
-    $stt = "SELECT * FROM tblGame ; ";
+    $games = array();
+    $stt = "SELECT * FROM tblGame WHERE availability = 'AVAILABLE' ; ";
     $result = mysql_query($stt, $db);
     if($result) {
         while($row = mysql_fetch_array($result)) {
-            echo $row[1];
+//            echo $row[1];
+            $games[] = array(
+                'id' => $row['id'],
+                'name' => $row['name'],
+                'console' => $row['console'],
+                'photoLink' => $row['photoLink'],
+                'description' => $row['description'],
+                'currentValue' => $row['currentValue'],
+                'availability' => $row['availability'],
+                'category' => $row['category']
+            );
         } 
     }else{
         echo 'FAIL';
     }
+    $app->response()->header('Content_type', 'application/json');
+    echo json_encode($games);
 });
 
 

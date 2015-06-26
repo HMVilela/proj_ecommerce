@@ -89,29 +89,29 @@ INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address
 INSERT INTO tblUser(id, passw, contactName, email, zipCode, state, city, address, phoneNumber) VALUES(9, 'p9', 'name_09', 'email_09@email.com', '37540-000', 'Minas Gerais', 'Santa Rita do Sapucai', 'Rua koko, 9', '35-1234-9876');
 
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(1, 'Final Fantasy Type-0', 'Description 01', 199.00, 'AVAILABLE', 'RPG', 'PS4', 'css/img/finalFantasyType0.jpg');
+VALUES(1, 'Final Fantasy Type-0', 'Description 01', 199.00, 'AVAILABLE', 'RPG', 'PS4', 'assets/css/img/finalFantasyType0.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(2, 'Final Fantasy XIV', 'Description 02', 190.00, 'AVAILABLE', 'MMORPG', 'PS4', 'css/img/finalFantasyXIV.jpg');
+VALUES(2, 'Final Fantasy XIV', 'Description 02', 190.00, 'AVAILABLE', 'MMORPG', 'PS4', 'assets/css/img/finalFantasyXIV.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(3, 'The Last of Us', 'Description 03', 120.00, 'AVAILABLE', 'SURVIVAL', 'PS4', 'css/img/theLastOfUs.jpg');
+VALUES(3, 'The Last of Us', 'Description 03', 120.00, 'AVAILABLE', 'SURVIVAL', 'PS4', 'assets/css/img/theLastOfUs.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(4, 'Mortal Kombat X', 'Description 04', 210.00, 'AVAILABLE', 'FIGHT', 'PS4', 'css/img/mortalKombatX.jpg');
+VALUES(4, 'Mortal Kombat X', 'Description 04', 210.00, 'AVAILABLE', 'FIGHT', 'PS4', 'assets/css/img/mortalKombatX.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(5, 'Ultra Street Fighter IV', 'Description 05', 140.00, 'AVAILABLE', 'FIGHT', 'PS3', 'css/img/ultraStreetFighterIV.jpg');
+VALUES(5, 'Ultra Street Fighter IV', 'Description 05', 140.00, 'AVAILABLE', 'FIGHT', 'PS3', 'assets/css/img/ultraStreetFighterIV.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(6, 'Shadow of Mordor', 'Description 06', 190.00, 'AVAILABLE', 'RPG', 'PS4', 'css/img/shadowOfMordor.jpg');
+VALUES(6, 'Shadow of Mordor', 'Description 06', 190.00, 'AVAILABLE', 'RPG', 'PS4', 'assets/css/img/shadowOfMordor.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(7, 'Dying Light', 'Description 07', 199.00, 'AVAILABLE', 'SURVIVAL', 'PS4', 'css/img/dyingLight.jpg');
+VALUES(7, 'Dying Light', 'Description 07', 199.00, 'AVAILABLE', 'SURVIVAL', 'PS4', 'assets/css/img/dyingLight.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(8, 'Battlefield: Hardline', 'Description 08', 140.00, 'AVAILABLE', 'SHOOTER', 'PS4', 'css/img/battlefieldHardline.jpg');
+VALUES(8, 'Battlefield: Hardline', 'Description 08', 140.00, 'AVAILABLE', 'SHOOTER', 'PS4', 'assets/css/img/battlefieldHardline.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(9, 'Destiny', 'Description 09', 170.00, 'AVAILABLE', 'SHOOTER', 'PS4', 'css/img/destiny.jpg');
+VALUES(9, 'Destiny', 'Description 09', 170.00, 'AVAILABLE', 'SHOOTER', 'PS4', 'assets/css/img/destiny.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(10, 'Tekken Tag Tournament', 'Description 10', 130.00, 'AVAILABLE', 'FIGHT', 'PS3', 'css/img/tekkenTagTournament.jpg');
+VALUES(10, 'Tekken Tag Tournament', 'Description 10', 130.00, 'AVAILABLE', 'FIGHT', 'PS3', 'assets/css/img/tekkenTagTournament.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(11, 'Need for Speed: Most Wanted', 'Description 11', 50.00, 'AVAILABLE', 'RUNNER', 'PS3', 'css/img/needForSpeedMostWanted.jpg');
+VALUES(11, 'Need for Speed: Most Wanted', 'Description 11', 50.00, 'AVAILABLE', 'RUNNER', 'PS3', 'assets/css/img/needForSpeedMostWanted.jpg');
 INSERT INTO tblGame(id, name, description, currentValue, availability, category, console, photoLink) 
-VALUES(12, 'Gran Turismo 6', 'Description 12', 40.00, 'AVAILABLE', 'RUNNER', 'PS3', 'css/img/granTurismoVI.jpg');
+VALUES(12, 'Gran Turismo 6', 'Description 12', 40.00, 'AVAILABLE', 'RUNNER', 'PS3', 'assets/css/img/granTurismoVI.jpg');
 
 
 

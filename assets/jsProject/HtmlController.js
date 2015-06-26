@@ -5,39 +5,67 @@ var HtmlController = {
 	},
 	getGameList: function () {
 		HtmlService.getGameList(function(response){
-            console.log(response);
-            
-            var i = 0;
-            for(i = 0; i < 10; i++){
-                var div = document.getElementById('gamesCatalogueList'),
-                    div1 = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
-                    div2 = HtmlController.createDiv('tile', ''),
-                    div3 = HtmlController.createDiv('price-label', 'R$ 139.00'),
-                    a1 = HtmlController.createA('#', '', ''),
-                    img1 = HtmlController.createImage('assets/css/img/1(1).jpg'),
-                    div4 = HtmlController.createDiv('footer', ''),
-                    a2 = HtmlController.createA('#', '', 'Nome do Produto'),
-                    div5 = HtmlController.createDiv('tools', ''),
-                    a3 = HtmlController.createA('#', 'add-cart-btn', ''),
-                    span1 = HtmlController.createSpan('', 'aew'),
-                    i1 = HtmlController.createI('icon-shopping-cart');
+//            console.log(response);
+            response.forEach(function(gameData) {
+//				console.log(gameData.id);
+                var divMother = document.getElementById('gamesCatalogueList'),
+                    divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
+                    divTile = HtmlController.createDiv('tile', ''),
+                    divPriceLabel = HtmlController.createDiv('price-label', 'R$ '+gameData.currentValue+'.00'),
+                    aClickImg = HtmlController.createA('#', '', ''),
+                    imgGame = HtmlController.createImage(gameData.photoLink),
+                    divFooter = HtmlController.createDiv('footer', ''),
+                    aProductName = HtmlController.createA('#', '', gameData.name),
+                    divTools = HtmlController.createDiv('tools', ''),
+                    aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', ''),
+                    spanCartName = HtmlController.createSpan('', 'Add ao Carrinho'),
+                    iIcon = HtmlController.createI('icon-shopping-cart');
 
-                div.appendChild(div1);
-                div1.appendChild(div2);
-                div2.appendChild(div3);
-                div2.appendChild(a1);
-                a1.appendChild(img1);
-                div2.appendChild(div4);
-                div4.appendChild(a2);
-                div4.appendChild(div5);
-                div5.appendChild(a3);
-                a3.appendChild(span1);
-                a3.appendChild(i1);
-            }
+                divMother.appendChild(divDefault);
+                divDefault.appendChild(divTile);
+                divTile.appendChild(divPriceLabel);
+                divTile.appendChild(aClickImg);
+                aClickImg.appendChild(imgGame);
+                divTile.appendChild(divFooter);
+                divFooter.appendChild(aProductName);
+                divFooter.appendChild(divTools);
+                divTools.appendChild(aAddCartBtn);
+                aAddCartBtn.appendChild(spanCartName);
+                aAddCartBtn.appendChild(iIcon);
+            });
+
             
             
+            });
             
-        });
+//            var i = 0;
+//            for(i = 0; i < 10; i++){
+//                var divMother = document.getElementById('gamesCatalogueList'),
+//                    divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
+//                    divTile = HtmlController.createDiv('tile', ''),
+//                    divPriceLabel = HtmlController.createDiv('price-label', 'R$ 139.00'),
+//                    aClickImg = HtmlController.createA('#', '', ''),
+//                    imgGame = HtmlController.createImage('assets/css/img/1(1).jpg'),
+//                    divFooter = HtmlController.createDiv('footer', ''),
+//                    aProductName = HtmlController.createA('#', '', 'Nome do Produto'),
+//                    divTools = HtmlController.createDiv('tools', ''),
+//                    aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', ''),
+//                    spanCartName = HtmlController.createSpan('', 'aew'),
+//                    iIcon = HtmlController.createI('icon-shopping-cart');
+//
+//                divMother.appendChild(divDefault);
+//                divDefault.appendChild(divTile);
+//                divTile.appendChild(divPriceLabel);
+//                divTile.appendChild(aClickImg);
+//                aClickImg.appendChild(imgGame);
+//                divTile.appendChild(divFooter);
+//                divFooter.appendChild(aProductName);
+//                divFooter.appendChild(divTools);
+//                divTools.appendChild(aAddCartBtn);
+//                aAddCartBtn.appendChild(spanCartName);
+//                aAddCartBtn.appendChild(iIcon);
+//            }
+//        });
 	},
     createImage: function(imageLocation) {
 		var el = document.createElement('img');
