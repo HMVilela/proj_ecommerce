@@ -1569,6 +1569,13 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
+.container-white {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+}
 /*
 @media (min-width: 768px) {
   .container {
@@ -9451,7 +9458,7 @@ html {
   font-size: 100%;
 }
 .page-content {
-  padding-top: 144px;
+  padding-top: 100px;
     background-color: black;
 }
 .gray-bg {
@@ -10213,7 +10220,7 @@ header {
   position: absolute;
   z-index: 15;
   width: 100%;
-  height: 144px;
+  height: 100px;
   outline: none;
 }
 header .left-bg {
@@ -11700,7 +11707,7 @@ header .search-form .close-search:hover {
 .menu {
   display: block;
   width: 100%;
-  height: 144px;
+  height: 100px;
   background: #2f343b;
   padding: 20px 0 0 0;
 }
@@ -11710,15 +11717,17 @@ header .search-form .close-search:hover {
   list-style: none;
   text-align: right;
   width: 100%;
-  max-width: 748px;
+/*  max-width: 748px;*/
   border-bottom: 1px solid #a3c756;
 }
+/*
 @media only screen and (max-width: 1200px) {
   .menu .main,
   .menu .catalog {
     max-width: 570px;
   }
 }
+*/
 .menu .main li,
 .menu .catalog li {
   position: relative;

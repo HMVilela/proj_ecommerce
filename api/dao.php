@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-
 $app = new \Slim\Slim();
 
 $app->post('/', function() {
@@ -31,7 +30,6 @@ $app->get('/getGameList', function () use ( $app ) {
     $result = mysql_query($stt, $db);
     if($result) {
         while($row = mysql_fetch_array($result)) {
-//            echo $row[1];
             $games[] = array(
                 'id' => $row['id'],
                 'name' => $row['name'],
@@ -49,7 +47,9 @@ $app->get('/getGameList', function () use ( $app ) {
     $app->response()->header('Content_type', 'application/json');
     echo json_encode($games);
 });
-
+$app->get('/getUserData', function () use ( $app ) {
+    echo 'Dados do Usuario';
+});
 
 
 function getConnection() {

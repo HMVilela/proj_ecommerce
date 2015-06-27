@@ -107,6 +107,7 @@ header .search-form {
 }
 .menu .main {
   border-color: #a3c756;
+    max-width: 80%;;
 }
 .menu .main li.has-submenu:hover {
   background: #2ba8db;

@@ -13,5 +13,18 @@ var UserService = {
                 callback(response);
             }
         });
+    },
+    getUserData: function(callback){
+        $.ajax({
+            type: 'GET',
+            contentType: 'application/json',
+            url: 'api/dao.php/getUserData',
+            success: function(response){
+                callback(response);
+            },
+            error: function(){
+                callback(response);
+            }
+        });
     }
 };

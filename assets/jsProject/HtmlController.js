@@ -12,12 +12,12 @@ var HtmlController = {
                     divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
                     divTile = HtmlController.createDiv('tile', ''),
                     divPriceLabel = HtmlController.createDiv('price-label', 'R$ '+gameData.currentValue+'.00'),
-                    aClickImg = HtmlController.createA('#', '', ''),
+                    aClickImg = HtmlController.createA('#', '', '', ''),
                     imgGame = HtmlController.createImage(gameData.photoLink),
                     divFooter = HtmlController.createDiv('footer', ''),
                     aProductName = HtmlController.createA('#', '', gameData.name),
                     divTools = HtmlController.createDiv('tools', ''),
-                    aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', ''),
+                    aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', '', 'HtmlController.addToCart('+gameData.id+');'),
                     spanCartName = HtmlController.createSpan('', 'Add ao Carrinho'),
                     iIcon = HtmlController.createI('icon-shopping-cart');
 
@@ -33,39 +33,7 @@ var HtmlController = {
                 aAddCartBtn.appendChild(spanCartName);
                 aAddCartBtn.appendChild(iIcon);
             });
-
-            
-            
-            });
-            
-//            var i = 0;
-//            for(i = 0; i < 10; i++){
-//                var divMother = document.getElementById('gamesCatalogueList'),
-//                    divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
-//                    divTile = HtmlController.createDiv('tile', ''),
-//                    divPriceLabel = HtmlController.createDiv('price-label', 'R$ 139.00'),
-//                    aClickImg = HtmlController.createA('#', '', ''),
-//                    imgGame = HtmlController.createImage('assets/css/img/1(1).jpg'),
-//                    divFooter = HtmlController.createDiv('footer', ''),
-//                    aProductName = HtmlController.createA('#', '', 'Nome do Produto'),
-//                    divTools = HtmlController.createDiv('tools', ''),
-//                    aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', ''),
-//                    spanCartName = HtmlController.createSpan('', 'aew'),
-//                    iIcon = HtmlController.createI('icon-shopping-cart');
-//
-//                divMother.appendChild(divDefault);
-//                divDefault.appendChild(divTile);
-//                divTile.appendChild(divPriceLabel);
-//                divTile.appendChild(aClickImg);
-//                aClickImg.appendChild(imgGame);
-//                divTile.appendChild(divFooter);
-//                divFooter.appendChild(aProductName);
-//                divFooter.appendChild(divTools);
-//                divTools.appendChild(aAddCartBtn);
-//                aAddCartBtn.appendChild(spanCartName);
-//                aAddCartBtn.appendChild(iIcon);
-//            }
-//        });
+        });
 	},
     createImage: function(imageLocation) {
 		var el = document.createElement('img');
@@ -74,7 +42,7 @@ var HtmlController = {
         }
 		return el;
 	},
-    createA: function(hrefValue, classValue, innerValue) {
+    createA: function(hrefValue, classValue, innerValue, onClick) {
 		var el = document.createElement('a');
         if(hrefValue != ''){
             el.setAttribute('href' ,hrefValue);
@@ -85,6 +53,9 @@ var HtmlController = {
         if(innerValue != ''){
             el.setAttribute('value' ,innerValue);
             el.innerHTML = innerValue;
+        }
+        if(onClick != ''){
+            el.setAttribute('onclick', onClick);
         }
 		return el;
 	},
@@ -114,6 +85,9 @@ var HtmlController = {
             el.innerHTML = innerValue;
         }
 		return el;
-	}
+	},
+    addToCart: function(id){
+        alert('Item ' + id + ' adicionado ao carrinho!');
+    }
 };
 HtmlController.init();
