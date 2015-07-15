@@ -1,6 +1,3 @@
-akshgdkhsakasdkjashdksja
-   
-sdasdsad
 <?php
     if(!isset($_SESSION)){
         session_start();
@@ -63,6 +60,9 @@ sdasdsad
           <ul class="main">
           	<li class="has-submenu">
                <a href="index.php">Home</a>
+            </li>
+          	<li class="has-submenu">
+               <a href="apiCorreios.php">API</a>
             </li>
           	<li class="has-submenu">
                <a href="#">Sua conta</a>
