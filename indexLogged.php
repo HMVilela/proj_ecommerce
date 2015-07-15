@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html class=" js no-touch rgba backgroundsize borderimage borderradius csstransforms csstransforms3d csstransitions svg">
    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,60 +14,23 @@
     <script src="assets/js/modernizr.custom.js"></script>
   </head>
   <body>
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                <i class="fa fa-times"></i>
-            </button>
-            <h2>Entre ou <a href="#">Registre-se</a></h2>
-          </div>
-          <div class="modal-body">
-          <form class="login-form" id="validateData">
-            <div class="form-group group">
-            	<label for="log-email">Email</label>
-              <input type="email" class="form-control" name="logEmail" id="logEmail" placeholder="Insira seu email" required="">
-            </div>
-            <div class="form-group group">
-            	<label for="log-password">Senha</label>
-              <input type="text" class="form-control" name="logPassword" id="logPassword" placeholder="Insira sua senha" required="">
-            </div>
-            <div class="checkbox">
-              <label>
-                  <div class="icheckbox" style="position: relative;">
-                      <input type="checkbox" name="remember" style="position: absolute; opacity: 0;">
-                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
-                  </div>
-              </label>
-            </div>
-            <input class="btn btn-success" type="submit" value="Login">
-          </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <header data-offset-top="500" data-stuck="600">
     	<div class="container">
       	<a class="logo" href="#"><img src="assets/css/img/logo.png" alt="Inatel Games"></a>
-        
         <div class="mobile-border"><span></span></div>
-        
         <nav class="menu">
           <ul class="main">
           	<li class="has-submenu">
-               <a href="index.html">Home</a>
+               <a href="indexLogged.php">Home</a>
             </li>
           	<li class="has-submenu">
-               <a href="#">Sua conta</a>
+               <a href="#">Compras</a>
             	<ul class="submenu">
-              	<li>
-              	    <a href="#" data-toggle="modal" data-target="#loginModal">
-                  	    Entrar / Registrar
-                  	 </a>
-                </li>
-              </ul>
+                    <li><a href="cart.php">Carrinho</a></li>
+                </ul>
+            </li>
+          	<li class="has-submenu">
+               <a href="personalInfo.php">Sua conta</a>
             </li>
           </ul>
         </nav>
@@ -122,7 +88,6 @@
 
     <script type="text/javascript" src="assets/js/conversion.js"></script>
     
-<!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>-->
     <script src="bower_components/blueimp-md5/js/md5.min.js"></script>
     
     <script type="text/javascript" src="assets/jsProject/HtmlService.js"></script>
@@ -134,25 +99,3 @@
 
 </body>
 </html>
-
-
-
-
-<script>
-var FillData = {
-	
-	init: function () {
-		FillData.setLoginForm();
-	},
-	setLoginForm: function () {
-		var form = document.getElementById('validateData');
-		form.addEventListener('submit', function(event) {
-            UserController.validateData(form);
-			event.preventDefault();
-		});
-		UserController.setFocus();
-	}
-};
-FillData.init();
-
-</script>

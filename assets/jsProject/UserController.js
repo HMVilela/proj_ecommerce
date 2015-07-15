@@ -1,3 +1,4 @@
+var sessionStatus = 'FAIL';
 var UserController = {
 	
     validateData: function(form){
@@ -7,7 +8,7 @@ var UserController = {
         };
         UserService.validateData(user, function(response){
             if(response != 'FAIL'){
-                var url = 'indexLogged.html';
+                var url = 'index.php';
                 window.open(url, '_self');
             }else{
                 alert('Usuario Nao Existe');
@@ -28,6 +29,23 @@ var UserController = {
         UserService.getUserData(function(response){
             console.log(response);
         });
+    },
+    endSession: function(){
+        UserService.endSession(function(response){
+            console.log(response);
+            var url = 'index.php';
+            window.open(url, '_self');
+        });
+    },
+    getSessionStatus: function(){
+        UserService.getSessionStatus(function(response){
+            console.log('ae'+response);
+            sessionStatus = response;
+//            var url = 'index.php';
+//            window.open(url, '_self');
+        });
     }
 };
-
+function getSessionStatus(){
+    return sessionStatus;
+}

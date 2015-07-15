@@ -4,7 +4,7 @@ var HtmlService = {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            url: 'api/dao.php/getGameList',
+            url: 'api/GameDAO.php/getGameList',
             success: function(response){
                 callback(response);
             },

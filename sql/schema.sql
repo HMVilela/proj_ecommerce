@@ -64,6 +64,7 @@ create table tblShop(
     id INTEGER NOT NULL AUTO_INCREMENT,
     userIdFk INTEGER NOT NULL,
     transactionValue DOUBLE NOT NULL,
+    deliverAddress VARCHAR(500), // COLOCAR OUTROS DADOS DO ENDERECO
     PRIMARY KEY(id),
     FOREIGN KEY (userIdFk) REFERENCES tblUser(id)
 );

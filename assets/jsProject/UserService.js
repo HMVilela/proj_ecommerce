@@ -4,12 +4,12 @@ var UserService = {
         $.ajax({
             type: 'POST',
             contentType: 'application/json',
-            url: 'api/dao.php/validateLoginData',
+            url: 'api/UserDAO.php/validateLoginData',
             data: JSON.stringify(user),
             success: function(response){
                 callback(response);
             },
-            error: function(){
+            error: function(response){
                 callback(response);
             }
         });
@@ -18,11 +18,38 @@ var UserService = {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            url: 'api/dao.php/getUserData',
+            url: 'api/UserDAO.php/getUserData',
             success: function(response){
                 callback(response);
             },
-            error: function(){
+            error: function(response){
+                callback(response);
+            }
+        });
+    },
+    endSession: function(callback){
+        $.ajax({
+            type: 'POST',
+            contentType: 'application/json',
+            url: 'api/UserDAO.php/endSession',
+            success: function(response){
+                callback(response);
+            },
+            error: function(response){
+                callback(response);
+            }
+        });
+    },
+    getSessionStatus: function(callback){
+        $.ajax({
+            type: 'GET',
+            contentType: 'application/json',
+            async: false,
+            url: 'api/UserDAO.php/getSessionStatus',
+            success: function(response){
+                callback(response);
+            },
+            error: function(response){
                 callback(response);
             }
         });

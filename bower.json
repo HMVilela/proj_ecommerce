@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/lucianoctrl8/proj_ecommerce",
   "description": "Inatel E-Commerce Game Project",
-  "main": "index.html",
+  "main": "index.php",
   "keywords": [
     "rest",
     "ajax",

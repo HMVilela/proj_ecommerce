@@ -5,9 +5,10 @@ var HtmlController = {
 	},
 	getGameList: function () {
 		HtmlService.getGameList(function(response){
-//            console.log(response);
+            //UserController.getSessionStatus();
+            //var ss = sessionStatus();
+            //console.log('ha:'+ss);
             response.forEach(function(gameData) {
-//				console.log(gameData.id);
                 var divMother = document.getElementById('gamesCatalogueList'),
                     divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
                     divTile = HtmlController.createDiv('tile', ''),
