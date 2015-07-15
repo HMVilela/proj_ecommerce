@@ -8,7 +8,7 @@ var HtmlService = {
             success: function(response){
                 callback(response);
             },
-            error: function(){
+            error: function(response){
                 callback(response);
             }
         });

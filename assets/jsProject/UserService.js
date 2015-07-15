@@ -44,7 +44,7 @@ var UserService = {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            async: false,
+            //async: false,
             url: 'api/UserDAO.php/getSessionStatus',
             success: function(response){
                 callback(response);

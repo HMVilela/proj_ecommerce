@@ -8,6 +8,7 @@ var HtmlController = {
             //UserController.getSessionStatus();
             //var ss = sessionStatus();
             //console.log('ha:'+ss);
+            console.log(response);
             response.forEach(function(gameData) {
                 var divMother = document.getElementById('gamesCatalogueList'),
                     divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
