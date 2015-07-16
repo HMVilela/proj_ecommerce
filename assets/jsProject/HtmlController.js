@@ -8,6 +8,7 @@ var HtmlController = {
             UserController.getSessionStatus(function(loginResponse){
                 response.forEach(function(gameData) {
                     var divMother = document.getElementById('gamesCatalogueList'),
+                        gameForm = document.createElement('form'),
                         divDefault = HtmlController.createDiv('col-lg-3 col-md-4 col-sm-6', ''),
                         divTile = HtmlController.createDiv('tile', ''),
                         divPriceLabel = HtmlController.createDiv('price-label', 'R$ '+gameData.currentValue+'.00'),
@@ -19,13 +20,20 @@ var HtmlController = {
                         spanCartName = HtmlController.createSpan('', 'Add ao Carrinho'),
                         iIcon = HtmlController.createI('icon-shopping-cart'),
                         aAddCartBtn;
+                    gameForm.setAttribute('method','POST');
+                    gameForm.setAttribute('onSubmit','CartController.addToCart();');
+                    console.log(loginResponse);
                     if(loginResponse == 'LOGIN_FAIL'){
                         aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', '', 'HtmlController.needCredentialsMessage();');
                     }else if(loginResponse == 'LOGIN_SUCCESS'){
+//                        aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', '', 'CartController.addToCart('+gameForm+');');
                         aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', '', 'CartController.addToCart('+gameData.id+');');
+                    }else{
+                        aAddCartBtn = HtmlController.createA('#', 'add-cart-btn', '', 'HtmlController.needCredentialsMessage();');
                     }
-
-                    divMother.appendChild(divDefault);
+//                    divMother.appendChild(divDefault);
+                    divMother.appendChild(gameForm);
+                    gameForm.appendChild(divDefault);
                     divDefault.appendChild(divTile);
                     divTile.appendChild(divPriceLabel);
                     divTile.appendChild(aClickImg);

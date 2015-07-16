@@ -152,6 +152,8 @@
     <script type="text/javascript" src="assets/jsProject/UserService.js"></script>
     <script type="text/javascript" src="assets/jsProject/UserController.js"></script>
   
+    <script type="text/javascript" src="assets/jsProject/CartService.js"></script>
+    <script type="text/javascript" src="assets/jsProject/CartController.js"></script>
 
 </body>
 </html>
