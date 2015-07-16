@@ -45,6 +45,62 @@
 
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body></body>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+    <title>API</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script type="text/javascript" src="assets/jsProject/api/js/Ajax.js"></script>
+    <script type="text/javascript" src="assets/jsProject/api/js/Index.js"></script> 
+</head>
+<body>
+<form action="" id="frmCEP" method="post">
+  <fieldset>
+  	<legend>Calcular Frete</legend>
+		
+		<div class="cep">
+			<label for="cep">CEP</label>:
+			<input type="text" name="cep" id="cep" /> ex.: 
+			<span>xxxxx-xxx</span>
+			<button>Calcular Frete</button>
+		</div>
+		<!--
+		<div class="rua">
+			<label for="rua">Rua</label>:
+			<input type="text" name="rua" id="rua" />
+		</div>
+		
+		<div class="numero">
+			<label for="numero">N&deg;</label>:
+			<input type="text" name="numero" id="numero" size="3" />
+		</div>
+		
+		<div class="complemento">
+			<label for="complemento">Complemento</label>:
+			<input type="text" name="complemento" id="complemento" />
+		</div>
+		
+		<div class="bairro">
+			<label for="bairro">Bairro</label>:
+			<input type="text" name="bairro" id="bairro" />
+		</div>-->
+		
+		<div class="cidade">
+			<label for="cidade">Cidade</label>:
+			<input type="text" name="cidade" id="cidade" />
+		</div>
+		
+		<div class="estado">
+			<label for="estado">Estado</label>:
+			<input type="text" name="estado" id="estado" size="2" />
+		</div>
+		
+		<div class="botoes">
+			<!--<button type="submit">Cadastrar</button>-->
+			<button type="reset">Limpar</button>
+		</div>
+		
+  </fieldset>
+</form>
+
+</body>
 </html>
