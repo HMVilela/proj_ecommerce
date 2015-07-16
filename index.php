@@ -155,6 +155,9 @@
     <script type="text/javascript" src="assets/jsProject/CartService.js"></script>
     <script type="text/javascript" src="assets/jsProject/CartController.js"></script>
 
+    <script type="text/javascript" src="assets/jsProject/GameService.js"></script>
+    <script type="text/javascript" src="assets/jsProject/GameController.js"></script>
+    
 </body>
 </html>
 

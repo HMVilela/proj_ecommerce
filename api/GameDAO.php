@@ -31,8 +31,8 @@ $app->get('/getGameList', function () use ( $app ) {
     echo json_encode($games);
 });
 //------------------------------------------------------------------------
-$app->get('/getGameById', function () use ( $app ) {
-	$db = getDB();
+$app->post('/getGameById', function () use ( $app ) {
+    $db = getDB();
 	$game = json_decode($app->request->getBody(), true);
     $games = array();
     $stt = "SELECT * FROM tblGame WHERE id = ".$game['id']." ";

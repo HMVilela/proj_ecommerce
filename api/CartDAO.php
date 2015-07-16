@@ -9,25 +9,13 @@ $app = new \Slim\Slim();
 //------------------------------------------------------------------------
 $app->post('/addToCart', function () use ( $app ) {
 	$db = getDB();
-	$user = json_decode($app->request->getBody(), true);
-    $stt = "INSERT INTO tblCart(userIdFk, gameIdFk, ) ";
-    $stt = $stt." email = '".$user['email']."' ";
-    $stt = $stt." AND passw = '".$user['password']."' ; ";
+	$cart = json_decode($app->request->getBody(), true);
+    $stt = "INSERT INTO tblCart(userIdFk, gameIdFk, transactionStatus, transactionValue) ";
+    $stt = $stt." VALUES(".$cart['userIdFk'].",".$cart['gameIdFk'].",'PENDING',".$cart['currentValue'].");";
     $result = mysql_query($stt, $db);
     if ($result) {
-        if($row = mysql_fetch_array($result)) {
-            $auxId = strval($row['id']);
-            $_SESSION['login_id'] = (string) $auxId;
-            $_SESSION['login_status'] = 'LOGIN_SUCCESS';
-            echo $auxId.' | '.$_SESSION['login_status'];
-        } else{
-            $_SESSION['login_id'] = '-1';
-            $_SESSION['login_status'] = 'LOGIN_FAIL';
-            echo 'FAIL';
-        }
+        echo 'SUCCESS';
     }else{
-        $_SESSION['login_id'] = '-1';
-        $_SESSION['login_status'] = 'LOGIN_FAIL';
         echo 'FAIL';
     }
 });
