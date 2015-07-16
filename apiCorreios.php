@@ -60,20 +60,21 @@
 		<div class="cep">
 			<label for="cep">CEP</label>:
 			<input type="text" name="cep" id="cep" /> ex.: 
-			<span>xxxxx-xxx</span>
+			<span>xxxxx-xxx</span><br>
+			<input type=radio name="pac" id="pac" />PAC
+			<input type=radio name="sedex" id="sedex" />SEDEX
 			<button>Calcular Frete</button>
 		</div>
+		<div class="valor">
+			<label for="valor">Valor</label>:
+			<input type="text" name="valor" id="valor" />
+		</div>
+		
+		<div class="entrega">
+			<label for="entrega">Prazo de entrega</label>:
+			<input type="text" name="entrega" id="entrega" size="3" />
+		</div>
 		<!--
-		<div class="rua">
-			<label for="rua">Rua</label>:
-			<input type="text" name="rua" id="rua" />
-		</div>
-		
-		<div class="numero">
-			<label for="numero">N&deg;</label>:
-			<input type="text" name="numero" id="numero" size="3" />
-		</div>
-		
 		<div class="complemento">
 			<label for="complemento">Complemento</label>:
 			<input type="text" name="complemento" id="complemento" />

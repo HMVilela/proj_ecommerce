@@ -1,9 +1,3 @@
-/**
-  *
-  * Script para busca por cep com Ajax
-  * @author: Edy Segura - edy@segura.pro.br
-  *
-  */
 var Index = {
 
 	init: function() {

@@ -1,10 +1,3 @@
-﻿/**
- *
- * Objeto literal para o uso da metodologia Ajax.
- * Documentacao disponivel em: http://code.google.com/p/jscomponentes/wiki/Ajax
- * @author: Edy Segura - edy@segura.pro.br
- *
- */
 var Ajax = {
 
 	loading: null,
