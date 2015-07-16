@@ -37,15 +37,15 @@ var UserController = {
             window.open(url, '_self');
         });
     },
-    getSessionStatus: function(){
+    getSessionStatus: function(callback){
         UserService.getSessionStatus(function(response){
-            console.log('ae'+response);
-            sessionStatus = response;
-//            var url = 'index.php';
-//            window.open(url, '_self');
+            callback(response);
+        });
+    },
+    getSessionId: function(callback){
+        UserService.getSessionId(function(response){
+            callback(response);
         });
     }
 };
-function getSessionStatus(){
-    return sessionStatus;
-}
+

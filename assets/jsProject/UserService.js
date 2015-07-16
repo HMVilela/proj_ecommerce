@@ -44,8 +44,20 @@ var UserService = {
         $.ajax({
             type: 'GET',
             contentType: 'application/json',
-            //async: false,
             url: 'api/UserDAO.php/getSessionStatus',
+            success: function(response){
+                callback(response);
+            },
+            error: function(response){
+                callback(response);
+            }
+        });
+    },
+    getSessionId: function(callback){
+        $.ajax({
+            type: 'GET',
+            contentType: 'application/json',
+            url: 'api/UserDAO.php/getSessionId',
             success: function(response){
                 callback(response);
             },

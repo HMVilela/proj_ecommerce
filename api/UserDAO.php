@@ -20,7 +20,7 @@ $app->post('/validateLoginData', function () use ( $app ) {
         if($row = mysql_fetch_array($result)) {
             $auxId = strval($row['id']);
             $_SESSION['login_id'] = (string) $auxId;
-            $_SESSION['login_status'] = 'LOGIN_OK';
+            $_SESSION['login_status'] = 'LOGIN_SUCCESS';
             echo $auxId.' | '.$_SESSION['login_status'];
         } else{
             $_SESSION['login_id'] = '-1';
@@ -44,6 +44,10 @@ $app->post('/endSession', function () use ( $app ) {
 //------------------------------------------------------------------------
 $app->get('/getSessionStatus', function () use ( $app ) {
     echo $_SESSION['login_status'];
+});
+//------------------------------------------------------------------------
+$app->get('/getSessionId', function () use ( $app ) {
+    echo $_SESSION['login_id'];
 });
 //------------------------------------------------------------------------
 //------------------------------------------------------------------------
